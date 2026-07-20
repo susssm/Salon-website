@@ -32,10 +32,26 @@ const isReplit =
   process.env.NODE_ENV !== 'production' &&
   process.env.REPL_ID !== undefined;
 
+// Strip broken sourceMappingURL comments from node_modules so Rollup never
+// attempts to load the missing maps that Radix UI ships. This prevents the
+// native Rollup layer from printing "Error when using sourcemap" lines that
+// Vercel's log scanner incorrectly counts as build failures.
+const stripNodeModulesSourcemaps = {
+  name: 'strip-node-modules-sourcemaps',
+  transform(code: string, id: string) {
+    if (!id.includes('node_modules')) return null;
+    return {
+      code: code.replace(/\/\/[#@]\s*sourceMappingURL=\S+/g, ''),
+      map: null,
+    };
+  },
+};
+
 export default defineConfig({
   customLogger: logger,
   base: basePath,
   plugins: [
+    stripNodeModulesSourcemaps,
     react(),
     tailwindcss(),
     // Replit-only plugins — skipped on Vercel/Netlify builds
