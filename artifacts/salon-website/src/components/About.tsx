@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
-import aboutImg from '@assets/generated_images/about-img.jpg';
+const aboutImg = '/salon-pedicure.jpg';
 
 export const About = () => {
   const features = [
@@ -28,7 +28,7 @@ export const About = () => {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <img 
                 src={aboutImg} 
-                alt="Stylists working in a luxurious salon" 
+                alt="Luxury pedicure spa chairs inside Nguyen Beauty Salon" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

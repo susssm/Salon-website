@@ -2,20 +2,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
-import img1 from '@assets/generated_images/gallery-1.jpg';
 import img2 from '@assets/generated_images/gallery-2.jpg';
-import img3 from '@assets/generated_images/gallery-3.jpg';
+import img1 from '@assets/generated_images/gallery-1.jpg';
 import img4 from '@assets/generated_images/gallery-4.jpg';
-import img5 from '@assets/generated_images/gallery-5.jpg';
-import img6 from '@assets/generated_images/gallery-6.jpg';
 
 const images = [
-  { src: img1, alt: 'Hair styling', span: 'col-span-1 row-span-2' },
-  { src: img2, alt: 'Nail art', span: 'col-span-1 row-span-1' },
-  { src: img3, alt: 'Spa facial', span: 'col-span-1 row-span-1' },
-  { src: img4, alt: 'Makeup application', span: 'col-span-1 row-span-2' },
-  { src: img5, alt: 'Hair coloring', span: 'col-span-1 row-span-1' },
-  { src: img6, alt: 'Massage', span: 'col-span-1 row-span-1' },
+  { src: '/salon-interior.jpg',       alt: 'Inside Nguyen Beauty Salon — nail stations and styling chairs',  span: 'col-span-1 row-span-2' },
+  { src: '/salon-exterior-night.jpg', alt: 'Nguyen Beauty Salon lit up at night',                             span: 'col-span-1 row-span-1' },
+  { src: img2,                        alt: 'Nail art',                                                        span: 'col-span-1 row-span-1' },
+  { src: img1,                        alt: 'Hair styling',                                                    span: 'col-span-1 row-span-2' },
+  { src: '/salon-exterior-day.jpg',   alt: 'Nguyen Beauty Salon storefront on Eugenie Street, Windsor',       span: 'col-span-1 row-span-1' },
+  { src: img4,                        alt: 'Makeup application',                                              span: 'col-span-1 row-span-1' },
 ];
 
 export const Gallery = () => {
