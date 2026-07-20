@@ -1,7 +1,23 @@
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'vite';
+import { createLogger, defineConfig } from 'vite';
+
+// Suppress the "Error when using sourcemap" lines that Radix UI triggers during
+// Vite's transform phase. These are logged via Vite's own logger (not Rollup's
+// onwarn), so they must be filtered here. Vercel's log scanner counts any line
+// containing "Error" as a build failure even when the build itself succeeds.
+const logger = createLogger();
+const _warn = logger.warn.bind(logger);
+logger.warn = (msg, opts) => {
+  if (msg.includes('sourcemap') || msg.includes("Can't resolve original location")) return;
+  _warn(msg, opts);
+};
+const _error = logger.error.bind(logger);
+logger.error = (msg, opts) => {
+  if (msg.includes('sourcemap') || msg.includes("Can't resolve original location")) return;
+  _error(msg, opts);
+};
 
 // PORT is only needed for the dev/preview server, not during `vite build`.
 // Vercel/Netlify don't set PORT, so we fall back to a safe default.
@@ -17,6 +33,7 @@ const isReplit =
   process.env.REPL_ID !== undefined;
 
 export default defineConfig({
+  customLogger: logger,
   base: basePath,
   plugins: [
     react(),
