@@ -54,6 +54,16 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, 'dist/public'),
     emptyOutDir: true,
+    // Suppress "Error when using sourcemap" Vite warnings that Vercel's log
+    // scanner incorrectly counts as build errors (Radix UI ships broken maps).
+    sourcemap: false,
+    rollupOptions: {
+      onwarn(warning, warn) {
+        // Drop source-map-related warnings entirely
+        if (warning.code === 'SOURCEMAP_ERROR') return;
+        warn(warning);
+      },
+    },
   },
   server: {
     port,
