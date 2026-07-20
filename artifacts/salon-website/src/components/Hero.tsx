@@ -44,19 +44,49 @@ export const Hero = () => {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,25,23,0.55) 0%, rgba(28,25,23,0.28) 50%, rgba(28,25,23,0.72) 100%)' }} />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center mt-16 md:mt-0">
+      {/* Main hero content — vertically centred, never overlaps stats */}
+      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center mt-16 md:mt-0 pb-40 md:pb-48">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="max-w-4xl"
         >
-          <span className="text-primary tracking-[0.3em] uppercase text-xs md:text-sm font-semibold mb-6 block">Welcome to Premium Care</span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
-            Beauty That Inspires <br className="hidden md:block" />
-            <span className="italic text-primary-foreground/90">Confidence</span>
+          {/* Premium eyebrow line with decorative rules */}
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0.6 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="flex items-center justify-center gap-4 mb-7"
+          >
+            <span className="block h-px w-12 md:w-20 bg-primary/60" />
+            <span className="text-primary/90 tracking-[0.35em] uppercase text-[10px] md:text-xs font-semibold whitespace-nowrap">
+              Welcome to Premium Care
+            </span>
+            <span className="block h-px w-12 md:w-20 bg-primary/60" />
+          </motion.div>
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-[1.12]">
+            Beauty That Inspires
+            <br />
+            <em className="not-italic" style={{ fontStyle: 'italic', color: 'hsl(var(--primary) / 0.92)', letterSpacing: '0.02em' }}>
+              Confidence
+            </em>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto font-light">
+
+          {/* Thin decorative divider under the headline */}
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="mx-auto mb-7 flex items-center justify-center gap-3"
+          >
+            <span className="block h-px w-8 bg-white/25" />
+            <span className="block w-1.5 h-1.5 rounded-full bg-primary/70" />
+            <span className="block h-px w-8 bg-white/25" />
+          </motion.div>
+
+          <p className="text-lg md:text-xl text-white/75 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Professional Hair Styling, Nail Care, Spa & Waxing in Windsor.
             Experience luxury pampering tailored just for you.
           </p>
@@ -77,22 +107,22 @@ export const Hero = () => {
             </a>
           </div>
         </motion.div>
-
-        {/* Stats overlay for desktop */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="hidden md:grid grid-cols-4 gap-8 absolute bottom-32 left-1/2 -translate-x-1/2 w-full max-w-5xl px-6"
-        >
-          {stats.map((stat, i) => (
-            <div key={i} className="text-center p-4 backdrop-blur-md bg-white/5 rounded-2xl border border-white/10">
-              <div className="text-2xl font-serif text-primary mb-1">{stat.value}</div>
-              <div className="text-xs text-white/70 uppercase tracking-wider">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
+
+      {/* Stats bar — anchored to the section bottom, always clear of the headline */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.8 }}
+        className="hidden md:grid grid-cols-4 gap-px absolute bottom-16 left-1/2 -translate-x-1/2 w-full max-w-4xl px-6 rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md bg-white/5"
+      >
+        {stats.map((stat, i) => (
+          <div key={i} className={`text-center py-5 px-4 ${i < stats.length - 1 ? 'border-r border-white/10' : ''}`}>
+            <div className="text-2xl font-serif text-primary mb-0.5">{stat.value}</div>
+            <div className="text-[10px] text-white/60 uppercase tracking-widest">{stat.label}</div>
+          </div>
+        ))}
+      </motion.div>
 
       <motion.a
         href="#about"
