@@ -31,17 +31,17 @@ export const Hero = () => {
   return (
     <section id="home" className="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden" data-testid="section-hero">
       {/* Background Images */}
-      <div className="absolute inset-0 z-0 bg-black">
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: '#1C1917' }}>
         <picture>
           <source media="(max-width: 767px)" srcSet={heroBgMobile} />
           <img
             src={heroBgDesktop}
             alt="Luxurious salon interior"
-            className="w-full h-full object-cover opacity-60 mix-blend-overlay"
-            style={{ transform: 'translateZ(0)', willChange: 'transform' }} // subtle hack for performance
+            className="w-full h-full object-cover opacity-70"
+            style={{ transform: 'translateZ(0)', willChange: 'transform' }}
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(28,25,23,0.55) 0%, rgba(28,25,23,0.28) 50%, rgba(28,25,23,0.72) 100%)' }} />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center mt-16 md:mt-0">
