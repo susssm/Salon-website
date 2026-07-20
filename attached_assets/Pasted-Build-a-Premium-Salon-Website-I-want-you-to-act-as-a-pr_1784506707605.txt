@@ -1,0 +1,393 @@
+Build a Premium Salon Website
+I want you to act as a professional UI/UX designer, branding expert, and senior full-stack web developer. Your task is to design and develop a modern, premium, elegant, mobile-first, production-ready website for a salon business.
+The final website should look like it was designed by a professional digital agency—not a generic template. Every section should feel luxurious, visually appealing, and polished.
+
+Business Information
+Business Name:
+Nguyen Beauty Salon
+Business Category:
+Beauty Salon
+Phone Number:
++1 (519) 800-7524
+Address:
+2605 Howard Ave Unit 4
+Windsor, ON N8X 3W7
+Canada
+Google Reviews:
+68 Reviews
+
+Website Objective
+The website should:
+Attract new customers
+Showcase the salon professionally
+Increase appointment bookings
+Build trust through elegant design
+Display services clearly
+Encourage phone calls
+Look modern and premium
+Work flawlessly on all devices
+The website should feel comparable to luxury salon websites and premium beauty brands.
+
+🚨 HIGHEST PRIORITY — MOBILE-FIRST RESPONSIVE DESIGN
+This is the most important requirement.
+Over 80–90% of customers will visit this website from their smartphones.
+Design the website mobile-first, then scale up for tablets and desktops.
+Do NOT simply shrink a desktop design for mobile. Create layouts specifically optimized for phone users.
+The experience on mobile should feel like a premium native app.
+The website must be fully optimized for:
+Small phones (320px+)
+iPhone (375px+)
+Android devices
+Large phones
+Tablets
+Laptops
+Desktop monitors
+Ultra-wide screens
+Ensure there is:
+No horizontal scrolling
+Proper spacing
+Large tap targets
+Excellent readability
+Thumb-friendly navigation
+Fast loading
+Responsive images
+Perfect responsiveness on every screen size
+
+Overall Design Style
+Create a luxurious beauty salon aesthetic.
+The design should feel:
+Elegant
+Feminine
+Premium
+Sophisticated
+Modern
+Clean
+Spacious
+Professional
+Use:
+Rounded corners
+Soft shadows
+Beautiful gradients
+Glassmorphism where appropriate
+Smooth animations
+Modern layouts
+Plenty of whitespace
+Premium photography presentation
+Avoid outdated designs.
+
+Color Palette
+Primary:
+Rose Gold (#B76E79)
+Secondary:
+Soft Pink (#F9D5D3)
+Accent:
+Champagne Gold (#D4AF37)
+Dark:
+#222222
+Light:
+#FAFAFA
+White:
+#FFFFFF
+Use subtle gradients between rose gold and soft pink where appropriate.
+
+Typography
+Use Google Fonts.
+Heading Font:
+Playfair Display
+Body Font:
+Poppins
+Button Font:
+Poppins SemiBold
+Typography should feel luxurious and highly readable.
+
+Tech Stack
+Build using:
+React
+TypeScript
+Vite
+Tailwind CSS
+Framer Motion
+React Router
+React Icons
+React Hook Form
+Swiper.js (or Embla Carousel)
+Lightbox Gallery
+Do NOT use Bootstrap or jQuery.
+Follow modern React best practices.
+
+Website Structure
+1. Home Page
+Create a stunning hero section.
+Include:
+Full-screen hero image
+Gradient overlay
+Elegant headline
+Headline:
+Beauty That Inspires Confidence
+Subheading:
+Professional Hair Styling, Nail Care, Spa & Waxing in Windsor.
+Buttons:
+Book Appointment
+Call Now
+Include:
+Scroll indicator
+Parallax background
+Smooth fade animations
+
+2. About Section
+Professional introduction.
+Talk about:
+Experienced stylists
+Friendly staff
+Relaxing atmosphere
+Modern salon
+Premium beauty products
+Customer satisfaction
+Clean and hygienic environment
+Use an image + content split layout.
+
+3. Services Section
+Create beautiful service cards.
+Services:
+Hair Styling
+Women's Haircut
+Men's Haircut
+Children's Haircut
+Hair Coloring
+Hair Treatment
+Manicure
+Pedicure
+Nail Care
+Spa
+Facial
+Waxing
+Eyebrow Services
+Massage
+Each card should include:
+Icon
+Service name
+Short description
+Hover animation
+Shadow
+Rounded corners
+
+4. Why Choose Us
+Use premium icon cards.
+Reasons:
+Experienced Professionals
+Premium Products
+Relaxing Atmosphere
+Affordable Pricing
+Friendly Staff
+Clean & Hygienic
+Personalized Care
+Excellent Customer Service
+
+5. Gallery
+Create a beautiful masonry gallery.
+Use the supplied salon images throughout the website.
+Include:
+Hover zoom effect
+Lightbox
+Smooth transitions
+Lazy loading
+Responsive gallery
+
+6. Testimonials
+Display:
+★★★★★
+68 Google Reviews
+Create realistic sample customer testimonials.
+Use an elegant slider.
+Include:
+Auto sliding
+Navigation arrows
+Swipe support on mobile
+Smooth animations
+
+7. Appointment CTA
+Large premium call-to-action section.
+Heading:
+Ready for Your Next Beauty Appointment?
+Buttons:
+Book Appointment
+Call Now
+Background image with overlay.
+
+8. FAQ
+Create an accordion.
+Questions like:
+Do I need an appointment?
+What services do you offer?
+Do you accept walk-ins?
+What payment methods are accepted?
+
+9. Contact
+Display:
+Business Name
+Phone
+Address
+Business Hours
+Embedded Google Map
+Beautiful Contact Form
+Fields:
+Name
+Phone
+Email
+Service
+Message
+Include proper validation.
+
+10. Footer
+Include:
+Business Name
+Quick Links
+Services
+Address
+Phone
+Opening Hours
+Google Maps Button
+Copyright
+Social Media Icons
+
+Navigation
+Sticky navigation.
+Initially transparent.
+Solid color while scrolling.
+Include:
+Logo
+Menu
+Call button
+Appointment button
+Mobile:
+Elegant animated hamburger menu.
+
+Animations
+Use Framer Motion.
+Include:
+Fade Up
+Fade Left
+Fade Right
+Scale
+Zoom
+Hover Lift
+Floating elements
+Scroll reveal
+Parallax
+Button ripple
+Smooth page transitions
+Animations should feel premium—not excessive.
+
+Components
+Create reusable React components.
+Examples:
+Navbar
+Hero
+Buttons
+Cards
+Gallery
+Testimonials
+FAQ
+Footer
+Contact Form
+CTA
+Each component should be clean and reusable.
+
+Extra Premium Features
+Include:
+Dark/Light Mode Toggle
+Scroll Progress Indicator
+Back to Top Button
+Floating Call Button
+Sticky Book Appointment Button
+Animated Statistics Section
+Newsletter Signup
+Instagram-style Gallery
+Beautiful Loading Screen
+Smooth Page Transitions
+Elegant Hover Effects
+Interactive Buttons
+Micro Animations
+Skeleton Loading Effects
+
+Images
+Use the uploaded salon images throughout the website.
+Suggested placement:
+Exterior storefront → Hero section
+Salon interior → About section
+Hair styling area → Gallery
+Pedicure chairs → Spa section
+If additional images are needed, use elegant royalty-free beauty-themed placeholder images until they are replaced.
+
+Performance
+Optimize for speed.
+Use:
+Lazy loading
+Optimized images
+Code splitting
+Fast rendering
+Responsive images
+Target:
+Google Lighthouse Score:
+Performance: 95+
+Accessibility: 95+
+SEO: 95+
+Best Practices: 95+
+
+Accessibility
+Ensure:
+Proper contrast
+Keyboard navigation
+Semantic HTML
+Alt text
+ARIA labels
+Accessible forms
+
+SEO
+Optimize every page.
+Include:
+Meta title
+Meta description
+Open Graph tags
+Twitter Cards
+Structured Data (Schema.org Local Business)
+XML Sitemap
+robots.txt
+SEO Keywords:
+Beauty Salon Windsor
+Hair Salon Windsor
+Nail Salon Windsor
+Spa Windsor
+Waxing Windsor
+Hair Styling Windsor
+Nguyen Beauty Salon
+
+Mobile Experience (Highest Priority)
+The mobile experience must feel exceptional.
+Include:
+Thumb-friendly navigation
+Large buttons
+Floating Call button
+Floating Book Appointment button
+Swipe-enabled gallery
+Swipe-enabled testimonials
+Sticky navigation
+Optimized typography
+Proper spacing
+Fast loading on mobile networks
+Touch-friendly interactions
+One-handed usability
+
+Code Quality
+Write clean, modular, maintainable code.
+Use:
+Reusable components
+Proper folder structure
+TypeScript best practices
+Modern React architecture
+Well-commented code
+Consistent naming conventions
+
+Final Deliverable
+Create a fully functional, production-ready website that looks like it was built by a premium web design agency. The design should be luxurious, elegant, and highly polished, with smooth animations, excellent performance, outstanding mobile responsiveness, and an exceptional user experience. Every section should feel thoughtfully designed, cohesive, and visually impressive, ensuring the salon stands out from competitors and leaves a memorable first impression on visitors.
+
