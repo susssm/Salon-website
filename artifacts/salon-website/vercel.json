@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm --filter @workspace/salon-website build",
-  "outputDirectory": "dist/public",
+  "outputDirectory": "dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
   "env": {
